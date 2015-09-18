@@ -1,4 +1,3 @@
-# general
-algorithm &amp; demo code
+# General
 
-Various algorithms in C++
+Various algorithms in C++ & demo code
