@@ -1,0 +1,24 @@
+// Reads a number from string
+//assumes that string contains at least 1 valid digit
+
+double number(char* str)
+{
+  double value= 0.0;
+  int index = 0;
+
+    while(isdigit(*(str + index)))       // Loop digits
+    value = 10*value + (*(str + index++) - '0');
+
+//not a digit check for decimal point
+  if(*(str + index) != '.')            
+    return value;                      //if not return value
+
+  double factor(1.0);                  // Factor for decimal places
+  while(isdigit(*(str + (++index))))   // Loop  digits
+  {
+    factor *= 0.1;                     // Decrease factor by factor of 10
+    value = value + (*(str + index) - '0')*factor;   // Add decimal place
+  }
+
+  return value;                        
+}
