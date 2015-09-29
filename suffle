@@ -40,3 +40,4 @@ void main()
 		cout << original[i] << endl;
 
 }
+
