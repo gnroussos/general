@@ -24,7 +24,7 @@ public class HRTimer
 			DWORD_PTR oldmask = SetThreadAffinityMask(GetCurrentThread(), 0);
 			QueryPerformanceCounter(&start);
 			// Restore original
-			SetThreadAffinityMask(GetCurrentThread(), oldmask); 
+			SetThreadAffinityMask(GetCurrentThread(), oldmask);
 		}
 		// return elapsed time in seconds
 		double StopTimer(void)
