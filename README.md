@@ -6,7 +6,7 @@ Demo code of various algorithms in C++
 A recursive function that returns the nth Fibonacci number, using Memoization *(optimization technique that caches computationally expensive functions)*
 
 ###- number
-Reads a number from string <br/>
+Reads a number from <code>string</code><br/>
 algorithm assumes the string contains at least 1 valid digit
 
 ###- suffle
