@@ -1,6 +1,6 @@
 # About
 
-Code for various demo algorithms in C++
+Demo code of various algorithms in C++
 
 ### - memoized fibonacci
 A recursive function that returns the nth Fibonacci number, using Memoization *(optimization technique that caches computationally expensive functions)*
