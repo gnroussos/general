@@ -35,7 +35,6 @@ long fibonacci(int n)
 //
 //int n: number to calc fibbonaci
 //long(*fib)(int): pointer to base fib function
-//return long: the result
 //
 long fibWrap(int n, long(*fib)(int))
 {
@@ -46,7 +45,7 @@ long fibWrap(int n, long(*fib)(int))
 
   if (i != 0)                                           // if in storage cache return cached result
   		value = memo.at(i);
-  	else                                                //otherwise calc & store
+  	else						//otherwise calc & store
   	{
   		if (n == 0)
   			value = n;
