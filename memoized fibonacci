@@ -9,6 +9,7 @@ using namespace std;
 
 //typedef long (*call_back) (int, int&);           //function pointer param in function signature 
 
+map <int, int> memo;
 typedef pair<int, long> Int_Pair;
 
 //base recursive fibonacci 
@@ -35,16 +36,14 @@ long fibonacci(int n)
 //
 //int n: number to calc fibbonaci
 //long(*fib)(int): pointer to base fib function
-//
+
 long fibWrap(int n, long(*fib)(int))
 {
-	map <int, int> memo;
-
-	long value;
+	long value = 0;
 	size_t i = memo.count(n);
 
-  if (i != 0)                                           // if in storage cache return cached result
-  		value = memo.at(i);
+  	if (i != 0)                                     // if in storage cache return cached result
+  		value = memo.at(n);
   	else						//otherwise calc & store
   	{
   		if (n == 0)
@@ -61,5 +60,5 @@ void main()
 	
 	long num_fib = 25;
 
-  cout << "fib("<< num_fib <<")= " << fibWrap(num_fib,fibonacci) << endl;
+  	cout << "fib("<< num_fib <<")= " << fibWrap(num_fib,fibonacci) << endl;
 }
