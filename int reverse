@@ -1,0 +1,29 @@
+//------------------------------------------------------------------------------------------------
+// Reverse digits of an integer, negative or positive.
+// In the case the result overflows returns 0
+// 
+// examples:	                                              prints: 
+//            cout << intReverse(-2147483389) << endl;              0 (overflow)
+//				    cout << intReverse(100) << endl;                      1
+//				    cout << intReverse(-524) << endl;                     -425
+//				    cout << intReverse(7483) << endl;                     3847
+// ------------------------------------------------------------------------------------------------
+
+int intReverse(int integer)
+{
+	long long store = integer;											//work with int64 to control overflow
+	long long newInt = 0;
+  	
+	store = abs(store);													    // work with positive numbers same as: store > 0 ? store : -store 
+
+	for ( ; store; store /= 10)
+		newInt = newInt * 10 + store % 10;
+	
+	if (newInt > 2147483647 || (integer < 0 && newInt > 2147483647))	//check for overflow 
+		return 0;
+	
+	if (integer < 0)
+		return -newInt;
+	else
+		return newInt;
+}
