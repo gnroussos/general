@@ -9,13 +9,17 @@
 //		cout << intReverse(7483) << endl;                     3847
 // ------------------------------------------------------------------------------------------------
 
+//works for base 10 numbers, with an extra *base* param to substitute 10
+//conversion into any numerical system would be possible
+//
+// int intReverse(int integer, int base)
+
 int intReverse(int integer)
 {
-	long long store = integer;											//work with int64 to control overflow
+	long long store = integer;						//work with int64 to control overflow
 	long long newInt = 0;
   	
 	store = abs(store);													    // work with positive numbers same as: store > 0 ? store : -store 
-
 	for ( ; store; store /= 10)
 		newInt = newInt * 10 + store % 10;
 	
