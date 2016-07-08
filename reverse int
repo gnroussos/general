@@ -3,10 +3,10 @@
 // In the case the result overflows returns 0
 // 
 // examples:	                                              prints: 
-//            cout << intReverse(-2147483389) << endl;              0 (overflow)
-//				    cout << intReverse(100) << endl;                      1
-//				    cout << intReverse(-524) << endl;                     -425
-//				    cout << intReverse(7483) << endl;                     3847
+//          	cout << intReverse(-2147483389) << endl;              0 (overflow)
+//		cout << intReverse(100) << endl;                      1
+//		cout << intReverse(-524) << endl;                     -425
+//		cout << intReverse(7483) << endl;                     3847
 // ------------------------------------------------------------------------------------------------
 
 int intReverse(int integer)
