@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------------------------
-// Reverse digits of an integer, negative or positive.
-// In the case the result overflows returns 0
+// Reverses digits of an integer, negative or positive.
+// In case the result overflows returns 0
 // 
 // examples:	                                              prints: 
 //          	cout << intReverse(-2147483389) << endl;              0 (overflow)
@@ -8,11 +8,6 @@
 //		cout << intReverse(-524) << endl;                     -425
 //		cout << intReverse(7483) << endl;                     3847
 // ------------------------------------------------------------------------------------------------
-
-//works for base 10 numbers, with an extra *base* param to substitute 10
-//conversion into any numerical system would be possible
-//
-// int intReverse(int integer, int base)
 
 int intReverse(int integer)
 {
