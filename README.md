@@ -11,7 +11,7 @@ Reads a number from <code>string</code><br/>
 algorithm assumes the string contains at least 1 valid digit
 
 ###- suffle
-Fisher–Yates shuffle algorithm
+Fisher–Yates shuffle algorithm<br/>
 Takes as input an array of <code>int</code> elements, max & low boundaries 
 <code>min <= rand &lt; max</code>
 
@@ -19,7 +19,7 @@ Takes as input an array of <code>int</code> elements, max & low boundaries
 A high resolution timer class (WIN32 API)
 
 ###- reverse int
-Reverse digits of an integer (negative / positive & checks for overflow)
+Reverses digits of an integer (negative / positive & checks for overflow)
 
 ###- palindrome int
 Determines if an integer is palindrome
