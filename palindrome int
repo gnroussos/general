@@ -1,0 +1,30 @@
+//------------------------------------------------------------------------------------------------
+// Palindrome integer determines if an integer is a palindrome. 
+// In case of overflow returns false
+// 
+// examples:	                                              prints: 
+//            cout << intPalindrome(-232) << endl;                  0 (false)
+//				    cout << intPalindrome(1) << endl;                     1 (true)
+//				    cout << intPalindrome(3003) << endl;                  1
+//				    cout << intPalindrome(2147483646) << endl;            0 (overflows)
+// ------------------------------------------------------------------------------------------------
+
+bool intPalindrome(int i)
+{
+	if (i < 0)                                  //no negative numbers
+		return false;
+
+	long long store = i;												//work with int64 for overflow
+	long long newInt = 0;
+
+	for (; store; store /= 10)                  //reverse the int
+		newInt = newInt * 10 + store % 10;
+
+	if (newInt > 2147483647) 									  //deal with overflow 
+		return false;
+
+	if (newInt == i)                            //compare reverse with input number
+	  return true;
+	else
+		return false;
+}
