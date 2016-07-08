@@ -3,10 +3,10 @@
 // In case of overflow returns false
 // 
 // examples:	                                              prints: 
-//            cout << intPalindrome(-232) << endl;                  0 (false)
-//				    cout << intPalindrome(1) << endl;                     1 (true)
-//				    cout << intPalindrome(3003) << endl;                  1
-//				    cout << intPalindrome(2147483646) << endl;            0 (overflows)
+/            	cout << intPalindrome(-232) << endl;                  0 (false)
+//		cout << intPalindrome(1) << endl;                     1 (true)
+//		cout << intPalindrome(3003) << endl;                  1
+//		cout << intPalindrome(2147483646) << endl;            0 (overflows)
 // ------------------------------------------------------------------------------------------------
 
 bool intPalindrome(int i)
