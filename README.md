@@ -23,3 +23,6 @@ Reverses digits of an integer (negative / positive & checks for overflow)
 
 ###- palindrome int
 Determines if an integer is palindrome
+
+###- int roman
+Converts integer to roman number
