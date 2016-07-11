@@ -1,0 +1,46 @@
+//------------------------------------------------------------------------------------------------
+// Converts an integer into Roman representation of the number.
+// 0 prints nothing.
+// 
+// examples:                                prints: 
+//    cout << intRoman(2090) << endl;               MMXC
+//		cout << intRoman(116)<< endl;                 CXVI
+//		cout << intRoman(89)<< endl;                  LXXXIX
+// ------------------------------------------------------------------------------------------------
+
+typedef pair<std::string,int> roman;
+
+string intRoman(int n)
+{
+	const vector<roman> roms
+	{
+		{"M",1000},
+		{"CM",900},
+		{"D",500},
+		{"CD",400},
+		{"C",100},
+		{"XC",90},
+		{"L",50},
+		{"XL",40},
+		{"X",10},
+		{"IX",9},
+		{"V",5},
+		{"IV",4},
+		{"I",1}
+	};
+	
+	string romanNumber;
+	size_t index = 0;
+	
+	while (n > 0)
+	{
+		int count = n / roms[index].second;
+		for (; count>0;count--)
+		{
+			romanNumber += roms[index].first;
+			n-=roms[index].second;
+		}			
+		index++;
+	}
+	return romanNumber;
+}
