@@ -2,9 +2,9 @@
 // Converts a number from Roman representation into an integer.
 //  
 // examples:                                prints: 
-//    cout << romanInt"(IX") << endl;               9
-//		cout << romanInt("MDCXCV")<< endl;            1695
-//		cout << romanInt"(LXXXIX")<< endl;            89
+//    	cout << romanInt"(IX") << endl;               9
+//	cout << romanInt("MDCXCV")<< endl;            1695
+//	cout << romanInt"(LXXXIX")<< endl;            89
 // ------------------------------------------------------------------------------------------------
 
 //helper function to map roman letters with numbers
