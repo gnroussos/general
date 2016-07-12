@@ -1,0 +1,61 @@
+//------------------------------------------------------------------------------------------------
+// Converts a number from Roman representation into an integer.
+//  
+// examples:                                prints: 
+//    cout << romanInt"(IX") << endl;               9
+//		cout << romanInt("MDCXCV")<< endl;            1695
+//		cout << romanInt"(LXXXIX")<< endl;            89
+// ------------------------------------------------------------------------------------------------
+
+//helper function to map roman letters with numbers
+int romanNumber(char c)
+{
+	switch (c)
+	{
+		case 'M':
+		case 'm':
+			return 1000;
+		case 'D':
+		case 'd':
+			return 500;
+		case 'C':
+		case 'c':
+			return 100;
+		case 'L':
+		case 'l':
+			return 50;
+		case 'X':
+		case 'x':
+			return 10;
+		case 'V':
+		case 'v':
+			return 5;
+		case 'I':
+		case 'i':
+			return 1;
+		default:
+			return 0;
+	}
+}
+
+int romanInt(const string &r)
+{
+	int result = 0, temp = 0, next = 0;
+
+	for (string::size_type i = 0; i < r.length();++i)
+	{
+		temp = romanNumber(r[i]);
+		if (i + 1 < r.length())
+			next = romanNumber(r[i + 1]);
+		else 
+			next=0;
+		if (next>temp)
+		{
+			result += next - temp;
+			i++;
+		}
+		else
+			result += temp;
+	}
+	return result;
+}
