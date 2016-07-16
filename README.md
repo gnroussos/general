@@ -29,3 +29,6 @@ Converts an integer to roman number
 
 ###- roman int
 Converts roman number to an integer
+
+###- super pow
+Calculates a <sup>b</sup> % 1337 where b is a large positive integer given as an array
