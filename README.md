@@ -31,4 +31,7 @@ Converts an integer to roman number
 Converts roman number to an integer
 
 ###- super pow
-Calculates a <sup>b</sup> % 1337 where b is a large positive integer given as an array
+Calculates <code>a <sup>b</sup> % 1337</code> where b is a large positive integer given as an array
+
+###- two sum
+Finds if two numbers in an array add up to a specific target
